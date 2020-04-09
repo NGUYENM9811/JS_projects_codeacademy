@@ -3,23 +3,29 @@ let computerScore = 0;
 let currentRoundNumber = 1;
 
 // Write your code below:
-function generateTarget() {
-    return Math.floor(Math.random()*10);
-}
-function compareGuesses(user,computer,target){
-    var userDiff=Math.abs(user-target);
-    var computerDiff=Math.abs(computer-target);
-    if (userDiff<=computerDiff){return true;}
-    else {return false;}
-}
-function updateScore(whoWin){
-    if (whoWin==="human"){
-        humanScore+=1;
+const generateTarget=()=>{
+    return Math.floor(10*Math.random());
     }
-    else if (whoWin==="computer"){
-        computerScore+=1;
+    
+function compareGuesses(computerGuess,userGuess,targetGuess){
+    const userDiff=Math.abs(userGuess-targetGuess);
+    const computerDiff=Math.abs(computerGuess-targetGuess);
+    if (userDiff<=computerDiff) {
+        return true;
     }
+    else {
+        return false;
+    }
+}
+    
+ function updateScore(winner){
+    if (winner===‘human’){
+        humanScore=humanScore+1;
+    }
+    else{
+        computerScore=computerScore+1;
+    }    
 }
 function advanceRound(){
-    currentRoundNumber++;
+    currentRoundNumber=currentRoundNumber+1;
 }
