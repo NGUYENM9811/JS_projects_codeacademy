@@ -8,8 +8,8 @@ const generateTarget=()=>{
 }
 
 function compareGuesses(computerGuess,userGuess,targetGuess){
-    const userDiff=Math.abs(userGuess-targetGuess);
-    const computerDiff=Math.abs(computerGuess-targetGuess);
+    var userDiff=Math.abs(userGuess-targetGuess);
+    var computerDiff=Math.abs(computerGuess-targetGuess);
     if (userDiff<=computerDiff) {
         return true;
     }
@@ -17,11 +17,12 @@ function compareGuesses(computerGuess,userGuess,targetGuess){
         return false;
     }
 }    
-function updateScore(winner){
+
+function updateScore(winner) {
     if (winner==="human") {
         humanScore=humanScore+1;
     }
-    else{
+    else if (winner==="computer") {
         computerScore=computerScore+1;
     }    
 }
