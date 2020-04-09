@@ -4,9 +4,9 @@ let currentRoundNumber = 1;
 
 // Write your code below:
 const generateTarget=()=>{
-    return Math.floor(10*Math.random());
+    return Math.floor(Math.random()*10);
 }
-   
+
 function compareGuesses(computerGuess,userGuess,targetGuess){
     const userDiff=Math.abs(userGuess-targetGuess);
     const computerDiff=Math.abs(computerGuess-targetGuess);
@@ -18,7 +18,7 @@ function compareGuesses(computerGuess,userGuess,targetGuess){
     }
 }    
 function updateScore(winner){
-    if (winner===‘human’){
+    if (winner==="human") {
         humanScore=humanScore+1;
     }
     else{
