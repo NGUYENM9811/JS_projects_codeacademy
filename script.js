@@ -7,9 +7,9 @@ const generateTarget=()=>{
     return Math.floor(Math.random()*10);
 }
 
-function compareGuesses(computerGuess,userGuess,targetGuess){
-    var userDiff=Math.abs(userGuess-targetGuess);
-    var computerDiff=Math.abs(computerGuess-targetGuess);
+function compareGuesses(userGuess,computerGuess,targetGuess) {
+    var userDiff=Math.abs(userGuess-targetGuess)
+    var computerDiff=Math.abs(computerGuess-targetGuess)
     if (userDiff<=computerDiff) {
         return true;
     }
